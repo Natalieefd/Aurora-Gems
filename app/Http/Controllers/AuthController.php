@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 
-use Auth;
-use Hash;
-use Illuminate\Http\Request;
+// use Auth;
+// use Hash;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -21,9 +23,10 @@ class AuthController extends Controller
                 return redirect('/register');
             }
             User::create([
-                'name' => $request->name,
+                'name' => $request->nama,
                 'username' => $request->username,
                 'password' => Hash::make($request->password),
+                'role' => "user",
             ]);
             session()->flash('success', 'Akun berhasil dibuat!');
             return redirect('/login');

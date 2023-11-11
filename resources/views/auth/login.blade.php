@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-</head>
+</head> --}}
+@extends('layouts.global')
+@section('content')
 
 <body class="bg-peach flex items-center justify-center h-screen">
     <div class="bg-white p-8 rounded-lg shadow-md w-96">
@@ -47,7 +49,7 @@
             <div class="flex justify-between mb-4">
                 <span class="text-sm">
                     Don't have an account?
-                    <a href="#"
+                    <a href="{{ route('register') }}"
                         class="text-sm text-end text-peach hover:font-medium">
                         Register here
                     </a>
@@ -63,3 +65,5 @@
 </body>
 
 </html>
+
+@endSection

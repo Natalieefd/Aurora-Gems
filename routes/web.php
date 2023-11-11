@@ -27,3 +27,14 @@ Route::post('/login/action', [
     AuthController::class,
     'loginAction'
 ])->name('login.action');
+
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+
+
+Route::post('/register/action', [
+    AuthController::class,
+    'registerAction'
+])->name('register.action');

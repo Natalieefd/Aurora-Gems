@@ -1,7 +1,7 @@
 @extends('layouts.global')
 @section('content')
 
-<div class="flex item-center justify-center h-screen bg-peach">
+<div class="flex items-center justify-center h-screen bg-peach">
     <div class="p-8 rounded-lg shadow-md w-96 h-fit bg-white">
         <h1 class="text-2xl font-bold text-center mb-4">Register</h1>
         <form action="{{ route('register.action') }}" method="post" class="">

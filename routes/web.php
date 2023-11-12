@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,6 +55,11 @@ Route::get('/admin/dashboard', function() {
     return view('admin.dashboard');
 })->name('admin.dashboard');
 
+Route::get('/admin/manajemen_product', function () {
+    return view('admin.manajemen_product', [
+        'product' => Product::all()
+    ]);
+})->name('admin.manajemen_product');
 
 Route::get('/logout', [
     AuthController::class,

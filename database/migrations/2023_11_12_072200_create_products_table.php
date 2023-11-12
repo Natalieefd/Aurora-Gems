@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('desc');
-            $table->double('size');
+            $table->integer('size');
             $table->string('warna');
             $table->double('berat');
             $table->integer('stok');

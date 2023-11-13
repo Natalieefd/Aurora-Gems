@@ -22,6 +22,9 @@
                             Nama
                         </th>
                         <th scope="col" class="px-6 py-3">
+                            Kategori
+                        </th>
+                        <th scope="col" class="px-6 py-3">
                             Desc
                         </th>
                         <th scope="col" class="px-6 py-3">
@@ -43,18 +46,17 @@
                             Gambar
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Kategori
-                        </th>
-                        <th scope="col" class="px-6 py-3">
                             Aksi
                         </th>
                     </tr>
                 </thead>
                 <tbody>
+                    @php $i=1 @endphp
                     @foreach ($product as $prd)
                         <tr class="bg-white border-b rounded-lg">
-                            <td class="px-6 py-4">{{ $prd['id'] }}</td>
+                            <td class="px-6 py-4">{{ $i }}</td>
                             <td class="px-6 py-4">{{ $prd['nama'] }}</td>
+                            <td class="px-6 py-4">{{ $prd['kategori']['jenis'] }}</td>
                             <td class="px-6 py-4">{{ $prd['desc'] }}</td>
                             <td class="px-6 py-4">{{ $prd['size'] }}</td>
                             <td class="px-6 py-4">{{ $prd['warna'] }}</td>
@@ -63,12 +65,11 @@
                             <td class="px-6 py-4">{{ $prd['harga'] }}</td>
                         </td>
                         <td class="p2">
-                            {{-- <div class="flex flex-col items-center">
-                                <img src="{{ asset("assets/$product->gambar") }}" alt="" class="h-[128px]">
-                                <p class="ms">{{ $product->gambar}}</p>
+                            <div class="flex flex-col items-center">
+                                <img src="{{ asset("assets/$prd->gambar") }}" alt="" class="h-[128px]">
                             </div>
-                        </td> --}}
-                            <td class="px-6 py-4">{{ $prd->kategori->jenis }}</td>
+                        </td>
+
                             <td class="px-6 py-4">
                                 <div class="flex space-x-2">
                                     <a href=""  onclick="return confirm('Are you sure want to update?')"><button
@@ -85,6 +86,7 @@ text-white"
                                 </div>
                             </td>
                         </tr>
+                        @php $i++ @endphp
                     @endforeach
                 </tbody>
             </table>

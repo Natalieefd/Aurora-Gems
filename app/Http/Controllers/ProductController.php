@@ -3,17 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Http;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+    public function index(){
+        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa';
+        $data = Http::get($endpoint);
+        return view('admin.manajemen_data',[
+        'manajemen_data'=>$data
+        ]);
+        }
+
     public function store(Request $request)
     {
 
 
         $nama_product = "";
 
-        if ($request->hasFile("product")) {
+        if ($request->hasFile("gambar")) {
             $randomNum = mt_rand(1000, 9999);
             $filename = $request->gambar->getClientOriginalName();
 

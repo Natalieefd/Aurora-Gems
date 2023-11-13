@@ -61,6 +61,12 @@ Route::get('/admin/manajemen_product', function () {
     ]);
 })->name('admin.manajemen_product');
 
+Route::get('/admin/product', function () {
+    return view('admin.product', [
+        'product' => Product::all()
+    ]);
+})->name('admin.product');
+
 Route::get('/logout', [
     AuthController::class,
     'logout'

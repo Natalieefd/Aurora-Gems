@@ -1,7 +1,7 @@
 @extends('layouts.global')
 
 @section('content')
-{{-- @include('components.navbar_admin') --}}
+@include('components.navigation_bar')
     <div class="bg-gradient-to-br from-pink to-deeppink p-8 rounded-lg shadow-md">
         <p class="text-4xl font-bold mb-4 text-white">Data Product~</p>
         <hr><br>
@@ -92,4 +92,5 @@ text-white"
             </table>
         </div>
     </div>
-    {{-- @include('components.footer') --}}
+    @include('components.footer')
+</section>

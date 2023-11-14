@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kategori;
 use App\Models\Product;
-// use Http;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 
 class ProductController extends Controller
 {
@@ -70,6 +68,20 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
+        $product = Product::find($id);
+
+        if ($request->gambar) {
+            if($product->gambar != ''  && $product->gambar != null){
+                $gambar_old = public_path('assets/'.$product->gambar);
+                unlink($gambar_old);
+            }
+
+            $path = public_path().'/assets/';
+            $file = $request->gambar;
+            $filename = $file->getClientOriginalName();
+            $request->gambar->move($path, $filename);
+        }
+
         $request->validate([
             "nama" => "required|string|max:30",
             "desc" => "required|string|max:100",
@@ -78,11 +90,20 @@ class ProductController extends Controller
             "berat" => "required|numeric",
             "stok" => "required|integer",
             "harga" => "required|integer",
+            "kategori_id" => "required",
         ]);
 
         $product = Product::findOrFail($id);
         $product->update([
-            // 'merk' => $request->merk,
+            "nama" => $request->nama,
+            "desc" => $request->desc,
+            "size" => $request->size,
+            "warna" => $request->warna,
+            "berat" => $request->berat,
+            "stok" => $request->stok,
+            "harga" => $request->harga,
+            "gambar" => $filename,
+            "kategori_id" => $request->kategori_id,
         ]);
         return redirect()->route('admin.manajemen_product')->with('success', 'Data Produk Berhasil Diubah');
     }
@@ -93,4 +114,11 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('admin.manajemen_product')->with('success','Data product Berhasil Dihapus');
         }
+
+    public function showProduct($id)
+    {
+        $product = Product::findOrFail($id);
+        $kategori = kategori::findOrFail($id);
+        return view('admin.product_detail', compact('product', 'kategori'));
+    }
 }

@@ -36,7 +36,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" name="nama" placeholder="Nama"
+                <input type="text" name="nama" placeholder="Nama" value="{{$products->nama}}"
                     class="w-full pl-12 pr-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
             </div>
             <div class="relative mb-6">
@@ -47,7 +47,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="textarea" name="desc" placeholder="deskripsi"
+                <input type="textarea" name="desc" placeholder="deskripsi" value="{{$products->desc}}"
                     class="w-full pl-12 pr-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
             </div>
             <div class="relative mb-6">
@@ -58,7 +58,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" name="size" placeholder="Size"
+                <input type="text" name="size" placeholder="Size" value="{{$products->size}}"
                     class="w-full pl-12 pr-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
             </div>
             <div class="relative mb-6">
@@ -69,7 +69,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" name="warna" placeholder="Warna"
+                <input type="text" name="warna" placeholder="Warna" value="{{$products->warna}}"
                     class="w-full pl-12 pr-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
             </div>
             <div class="relative mb-6">
@@ -80,7 +80,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" name="berat" placeholder="Berat"
+                <input type="text" name="berat" placeholder="Berat" value="{{$products->berat}}"
                     class="w-full pl-12 pr-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
             </div>
             <div class="relative mb-6">
@@ -91,7 +91,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" name="stok" placeholder="Stok"
+                <input type="text" name="stok" placeholder="Stok" value="{{$products->stok}}"
                     class="w-full pl-12 pr-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
             </div>
             <div class="relative mb-6">
@@ -102,7 +102,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" name="harga" placeholder="Harga"
+                <input type="text" name="harga" placeholder="Harga" value="{{$products->harga}}"
                     class="w-full pl-12 pr-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
             </div>
             <label for="kategori_id">Kategori</label>

@@ -3,9 +3,21 @@
 @section('content')
 @include('components.navigation_bar')
 
-    <div class="bg-white p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div class="bg-white p-8">
+
+        <div class="mb-4">
+            <label for="category" class="block text-sm font-medium text-gray-700">Filter by Category:</label>
+            <select id="category" name="category" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                <option value="all">All Categories</option>
+                <option value="gelang">Gelang</option>
+                <option value="cincin">Cincin</option>
+                <option value="kalung">Kalung</option>
+                <option value="anting-anting">Anting-Anting</option>
+            </select>
+        </div>
+        <div class="bg-white p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         @foreach ($product as $prd)
-        <div class="bg-peach p-4 shadow-md  rounded-3xl ">
+        <div class="bg-pink p-4 shadow-md  rounded-3xl ">
             <button class="text-red-500 hover:text-red-700 love-icon" data-product-id="1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

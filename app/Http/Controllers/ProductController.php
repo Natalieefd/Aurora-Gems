@@ -90,7 +90,6 @@ class ProductController extends Controller
     public function delete($id){
         $product = product::findOrFail($id);
         $product->delete();
-        return redirect()->route('admin.manajemen_product')->with('success','Data product
-        Berhasil Dihapus');
+        return redirect()->route('admin.manajemen_product')->with('success','Data product Berhasil Dihapus');
         }
 }

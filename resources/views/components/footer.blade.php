@@ -1,4 +1,4 @@
-<footer class="bg-deeppink mt-12 text-peach">
+<footer class="bg-deeppink  text-peach">
     <div class="flex justify-between items-center gap-4 py-5 pr-10">
         <img src="{{ asset('assets/logo_aurora_gems_render.png') }}" alt="" class="w-1/5">
         <ul class="flex flex-col justify-center gap-10">

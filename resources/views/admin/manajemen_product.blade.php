@@ -2,7 +2,7 @@
 
 @section('content')
 @include('components.navigation_bar')
-    <div class="bg-gradient-to-br from-pink to-deeppink p-8 rounded-lg shadow-md">
+    <div class="bg-gradient-to-br from-pink to-deeppink p-8 shadow-md`">
         <p class="text-4xl font-bold mb-4 text-white">Data Product~</p>
         <hr><br>
         <div class="w-full h-auto flex justify-end">
@@ -13,7 +13,7 @@
         </div><br>
         <div class="relative overflow-x-auto">
             <table class="w-full text-sm text-left text-gray-500 rounded-lg">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50  rounded-lg">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             No.

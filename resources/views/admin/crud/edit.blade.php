@@ -8,7 +8,7 @@
 <div class="flex items-center justify-center h-screen bg-peach">
     <div class="p-8 rounded-lg shadow-md w-96 h-fit bg-white">
         <h1 class="text-2xl font-bold text-center mb-4">Edit Data Product</h1>
-        <form action="{{ route('admin.update', $products->id) }}" method="post" class="">
+        <form action="{{ route('admin.update', $products->id) }}" method="post" class="" enctype="multipart/form-data">
             @csrf
             @if (session('error'))
                 <div class="mb-6">
@@ -114,7 +114,7 @@
             </select>
             <div>
                 <label>Upload Gambar</label>
-                <input type="file" name="image"
+                <input type="file" name="gambar"
                 class="w-full bg-gray-200 p-2 rounded shadow-sm border border-gray-200 focus:outline-none focus:bg-white mt-2">
                 @error('image')
                     <div class="bg-red-400 p-2 shadow-sm rounded mt-2">

@@ -18,7 +18,14 @@
         </div>
     </div>
     <div class="flex text-center items-center bg-gray-50 h-96 w-96 rounded-lg mr-36 shadow-md">
-        <p>deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi</p>
+        <p>Nama<p>
+        <p>Deskripsi</p>
+        <p>Size</p>
+        <p>Kategori</p>
+        <p>Warna</p>
+        <p>Berat</p>
+        <p>Stok</p>
+        <p>Harga</p>
     </div>
 </div>
 

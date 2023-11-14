@@ -21,7 +21,7 @@ class ProductController extends Controller
     {
         $nama_product = "";
 
-        if ($request->hasFile("gambar")) {
+        if ($request->gambar) {
             $randomNum = mt_rand(1000, 9999);
             $filename = $request->gambar->getClientOriginalName();
 
@@ -39,7 +39,6 @@ class ProductController extends Controller
             "berat" => "required|numeric",
             "stok" => "required|integer",
             "harga" => "required|integer",
-            "gambar" => "required|image|mimes:jpeg,jpg,png",
             "kategori_id" => "required",
         ]);
 

@@ -1,10 +1,19 @@
 <nav class="bg-deeppink">
     <div class="flex justify-between items-center pl-10 pr-10 text-peach">
-        <a href="{{-- {{ route('') }} --}}">
-            <p class="capitalize font-semibold">produk</p>
-        </a>
+        <ul class="flex gap-10">
+            <li>
+                <a href="{{ route('admin.product') }}">
+                    <p class="capitalize font-semibold">produk</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('pengguna.dashboard') }}">
+                    <p class="capitalize font-semibold">home</p>
+                </a>
+            </li>
+        </ul>
         <img src="{{ asset('assets/logo_aurora_gems_render.png') }}" alt="Aurora Gems" class="w-16">
-        <ul class="flex gap-5">
+        <ul class="flex gap-10">
             <li>
                 @if (Auth::check())
                 <a href="{{-- {{ route('') }} --}}">

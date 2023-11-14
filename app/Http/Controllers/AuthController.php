@@ -36,31 +36,26 @@ class AuthController extends Controller
         }
     }
 
-    public function loginAction(Request $request)
-    {
-        if(Auth::check()){
-            if(Auth::user()->role=='admin'){
-                if('username'=="admin"&&'password'=="123"){
-                    return redirect('/admin/dashboard');
-                }else{
-                    session()->flash('error', 'Username atau Password anda salah!');
-                    return redirect('/login');
-            }
-        }else{
-            $data = [
-                'username' => $request->username,
-                'password' => $request->password,
-            ];
-            if (Auth::attempt($data)) {
-                return redirect('/pengguna/dashboard');
-            } else {
-                session()->flash('error', 'Username atau Password anda salah!');
-                return redirect('/login');
-            }
-        }
+    public function loginAction(Request $request) {
+        $data = [
+            'username' => $request->username,
+            'password' => $request->password,
+        ];
+
+        if ($data['username'] == 'aurora' && $data['password'] == '123') {
+            return redirect('/admin/dashboard');
         }
 
+        if (Auth::attempt($data)) {
+            return redirect('/pengguna/dashboard');
+        } else {
+            // Tampilkan pesan kesalahan jika otentikasi gagal
+            session()->flash('error', 'Username atau Password anda salah!');
+            return redirect('/login');
+        }
     }
+
+
 
     public function logout()
     {

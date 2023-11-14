@@ -1,7 +1,7 @@
 @extends('layouts.global')
 
 @section('content')
-@include('components.navigation_bar')
+@include('components.navigation_bar_admin')
     <div class="bg-gradient-to-br from-pink to-deeppink p-8 shadow-md`">
         <p class="text-4xl font-bold mb-4 text-white">Data Product~</p>
         <hr><br>

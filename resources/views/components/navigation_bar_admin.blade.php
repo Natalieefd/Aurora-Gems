@@ -1,12 +1,12 @@
 <nav class="bg-deeppink">
     <div class="flex justify-between items-center pl-10 pr-10 text-peach">
-        <ul class="flex gap-10 ">
+        <ul class="flex gap-10">
             <li>
-                <a href="{{-- {{ route('') }} --}}">
+                <a href="{{ route('admin.product') }}">
                     <p class="capitalize font-semibold">produk</p>
                 </a>
             </li>
-            <li><a href="{{-- {{ route('') }} --}}">
+            <li><a href="{{ route('admin.manajemen_product') }}">
                     <p class="capitalize font-semibold">manajemen produk</p>
                 </a></li>
         </ul>

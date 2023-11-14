@@ -7,7 +7,7 @@
         <hr><br>
         <div class="w-full h-auto flex justify-end">
             <div class="w-full h-auto flex justify-end">
-                <a href=""><button
+                <a href="{{ route('admin.add') }}"><button
                         class="px-4 py-2 bg-green-600 rounded-md text text-white">Create</button></a>
             </div>
         </div><br>
@@ -71,8 +71,8 @@
                         </td>
 
                             <td class="px-6 py-4">
-                                <div class="flex space-x-2">
-                                    <a href=""  onclick="return confirm('Are you sure want to update?')"><button
+                                <div class="flex space-x-2">'
+                                    <a href="{{ route('admin.edit', $prd['id']) }}"  onclick="return confirm('Are you sure want to update?')"><button
                                         class="px-4 py-2 bg-yellow-300 rounded-md
             text">Edit</button></a>
 

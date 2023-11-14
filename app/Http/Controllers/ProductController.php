@@ -2,20 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Product;
-use Http;
+// use Http;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class ProductController extends Controller
 {
-
-    public function index(){
-        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa';
-        $data = Http::get($endpoint);
-        return view('admin.manajemen_data',[
-        'manajemen_data'=>$data
-        ]);
-        }
 
     public function store(Request $request)
     {
@@ -56,7 +50,42 @@ class ProductController extends Controller
             "gambar" => $nama_product,
             "kategori_id" => $validateData["kategori_id"],
         ]);
-        return redirect()->route("")->with("Sukses", "Data berhasil ditambahkan!");
+        return redirect()->route("admin.manajemen_product")->with("Sukses", "Data berhasil ditambahkan!");
     }
 
+    public function tambah()
+    {
+        return view('admin.crud.add', [
+            'kategoris' => Kategori::all(),
+        ]);
+    }
+
+    public function edit($id)
+    {
+        return view('admin.crud.edit', [
+            'products' => Product::all()
+                ->where('id', $id)
+                ->first(),
+            'kategoris' => Kategori::all()
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            "nama" => "required|string|max:30",
+            "desc" => "required|string|max:100",
+            "size" => "required|integer",
+            "warna" => "required|string",
+            "berat" => "required|numeric",
+            "stok" => "required|integer",
+            "harga" => "required|integer",
+        ]);
+
+        $product = Product::findOrFail($id);
+        $product->update([
+            // 'merk' => $request->merk,
+        ]);
+        return redirect()->route('admin.manajemen_product')->with('success', 'Data Produk Berhasil Diubah');
+    }
 }

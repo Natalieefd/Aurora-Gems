@@ -8,7 +8,7 @@
 <div class="flex items-center justify-center h-screen bg-peach">
     <div class="p-8 rounded-lg shadow-md w-96 h-fit bg-white">
         <h1 class="text-2xl font-bold text-center mb-4">Add Data Product</h1>
-        <form action="{{ route('admin.store') }}" method="post" class="">
+        <form action="{{route('admin.store')}}" method="post" class="">
             @csrf
             @if (session('error'))
                 <div class="mb-6">
@@ -114,6 +114,7 @@
             <button type="submit"
                 class="w-full h-auto py-4 text-white font-medium bg-pink rounded-md flex justify-center items-center hover: bg-deeppink">
                 Submit
+            </button>
         </form>
     </div>
 </div>

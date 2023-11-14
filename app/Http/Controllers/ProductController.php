@@ -10,11 +10,15 @@ use Illuminate\Support\Facades\Http;
 
 class ProductController extends Controller
 {
+    public function tambah()
+    {
+        return view('admin.crud.add', [
+            'kategoris' => Kategori::all(),
+        ]);
+    }
 
     public function store(Request $request)
     {
-
-
         $nama_product = "";
 
         if ($request->hasFile("gambar")) {
@@ -35,8 +39,6 @@ class ProductController extends Controller
             "berat" => "required|numeric",
             "stok" => "required|integer",
             "harga" => "required|integer",
-
-
         ]);
 
         Product::create([
@@ -50,15 +52,10 @@ class ProductController extends Controller
             "gambar" => $nama_product,
             "kategori_id" => $validateData["kategori_id"],
         ]);
-        return redirect()->route("admin.manajemen_product")->with("Sukses", "Data berhasil ditambahkan!");
+        return redirect()->route('admin.manajemen_product')->with('Sukses', 'Data berhasll di tambahkan!');
     }
 
-    public function tambah()
-    {
-        return view('admin.crud.add', [
-            'kategoris' => Kategori::all(),
-        ]);
-    }
+
 
     public function edit($id)
     {
@@ -88,4 +85,12 @@ class ProductController extends Controller
         ]);
         return redirect()->route('admin.manajemen_product')->with('success', 'Data Produk Berhasil Diubah');
     }
+
+
+    public function delete($id){
+        $product = product::findOrFail($id);
+        $product->delete();
+        return redirect()->route('admin.manajemen_product')->with('success','Data product
+        Berhasil Dihapus');
+        }
 }

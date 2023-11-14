@@ -76,13 +76,13 @@
                                         class="px-4 py-2 bg-yellow-300 rounded-md
             text">Edit</button></a>
 
-                                    <form action=""method="post">
-                                        @csrf
-                                        <button class="px-4 py-2 bg-red-600 rounded-md text
+            <form action="{{ route('admin.delete', $prd->id) }}" method="post">
+                @csrf
+                <button class="px-4 py-2 bg-red-600 rounded-md text
 
 text-white"
-                                            onclick="return confirm('Are you sure want to delete?')">Delete</button>
-                                    </form>
+                    onclick="return confirm('Are you sure want to delete?')">Delete</button>
+            </form>
                                 </div>
                             </td>
                         </tr>

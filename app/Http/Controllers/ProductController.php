@@ -39,6 +39,8 @@ class ProductController extends Controller
             "berat" => "required|numeric",
             "stok" => "required|integer",
             "harga" => "required|integer",
+            "gambar" => "required|image|mimes:jpeg,jpg,png",
+            "kategori_id" => "required",
         ]);
 
         Product::create([

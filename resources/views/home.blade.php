@@ -2,8 +2,8 @@
 @section('content')
 @include('components.navigation_bar')
 @include('components.promo_ads')
-@include('components.top_product')
 @include('components.about_us')
-@include('components.review')
+@include('components.top_product')s
+{{-- @include('components.review') --}}
 @include('components.footer')
 @endSection

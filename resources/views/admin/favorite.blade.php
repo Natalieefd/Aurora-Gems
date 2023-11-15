@@ -15,8 +15,9 @@
                 </button>
 
             <img src="{{ asset("assets/$prd->gambar") }}" alt=""  class="w-80 h-48 mt-0 object-fill rounded-lg">
+
             <h3 class="text-lg font-semibold mb-2 mt-2"> {{$prd->Product->nama}}</h3>
-            <p class="text-lg font-semibold mb-2">Rp {{$prd->harga}}</p>
+            <p class="text-lg font-semibold mb-2">Rp {{$prd->Product->harga}}</p>
         </div>
     @endforeach
     </div>

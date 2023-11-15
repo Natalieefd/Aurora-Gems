@@ -2,9 +2,15 @@
     <div class="flex justify-between items-center pl-10 pr-10 text-peach">
         <ul class="flex gap-10">
             <li>
+                {{-- @if (Auth::check()) --}}
                 <a href="{{ route('pengguna.product') }}">
                     <p class="capitalize font-semibold">produk</p>
                 </a>
+                {{-- @else
+                <a href="{{ route('login') }}">
+                    <p class="capitalize font-semibold">produk</p>
+                </a>
+                @endif --}}
             </li>
             <li>
                 <a href="{{ route('pengguna.dashboard') }}">

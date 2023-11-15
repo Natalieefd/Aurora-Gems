@@ -15,6 +15,15 @@ class ProductController extends Controller
         ]);
     }
 
+    public function filter($kategori)
+    {
+        $product = Product::where('kategori_id', '1');
+        dd($product);
+        return view('admin.product', [
+            'product' => $product
+        ]);
+    }
+
     public function store(Request $request)
     {
         $nama_product = "";
@@ -71,12 +80,12 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         if ($request->gambar) {
-            if($product->gambar != ''  && $product->gambar != null){
-                $gambar_old = public_path('assets/'.$product->gambar);
+            if ($product->gambar != ''  && $product->gambar != null) {
+                $gambar_old = public_path('assets/' . $product->gambar);
                 unlink($gambar_old);
             }
 
-            $path = public_path().'/assets/';
+            $path = public_path() . '/assets/';
             $file = $request->gambar;
             $filename = $file->getClientOriginalName();
             $request->gambar->move($path, $filename);
@@ -109,11 +118,12 @@ class ProductController extends Controller
     }
 
 
-    public function delete($id){
+    public function delete($id)
+    {
         $product = product::findOrFail($id);
         $product->delete();
-        return redirect()->route('admin.manajemen_product')->with('success','Data product Berhasil Dihapus');
-        }
+        return redirect()->route('admin.manajemen_product')->with('success', 'Data product Berhasil Dihapus');
+    }
 
     public function showProduct($id)
     {

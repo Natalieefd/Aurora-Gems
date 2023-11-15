@@ -81,7 +81,7 @@
                     <label class="capitalize font-medium text-black px-2">Upload Gambar</label>
                     <input type="file" name="gambar"
                         class="p-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
-                    @error('image')
+                    @error('gambar')
                         <div class="bg-red-400 p-2 shadow-sm rounded mt-2">
                             {{ $message }}
                         </div>

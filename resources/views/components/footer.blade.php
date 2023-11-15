@@ -1,5 +1,5 @@
-<footer class="bg-deeppink  text-peach">
-    <div class="flex flex-col justify-between items-center gap-4 py-5 pr-10 mt-10 text-sm">
+<footer class="bg-deeppink text-peach">
+    <div class="flex flex-col justify-between items-center gap-4 py-5 pr-10 text-sm">
         <img src="{{ asset('assets/logo_aurora_gems_render.png') }}" alt="" class="w-1/12">
         <ul class="flex justify-center gap-10">
             <li><a href="" class="capitalize">help center</a></li>

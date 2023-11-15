@@ -20,7 +20,7 @@ class Product extends Model
 
     public function favorite(): HasMany
     {
-        return $this->HasMany(favorite::class, 'product_id', 'id');
+        return $this->HasMany(Favorite::class, 'product_id', 'id');
     }
 
 

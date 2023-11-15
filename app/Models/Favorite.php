@@ -14,7 +14,7 @@ class Favorite extends Model
 
     public function Product(): BelongsTo
     {
-        return $this->belongsTo(kategori::class, 'product_id');
+        return $this->belongsTo(Product::class, 'product_id');
     }
 
     public function User(): BelongsTo

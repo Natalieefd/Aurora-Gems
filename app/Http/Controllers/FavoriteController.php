@@ -29,7 +29,8 @@ class FavoriteController extends Controller
         //         $query->with("user")->where("user_id", Auth::user()->id);
         //     }
         // ])->get();
-        $product = Favorite::with('product')->where('user_id', Auth::user()->id)->get();
+        $product = Favorite::where('user_id', Auth::user()->id)->get();
+        // dd($product);
 // return $product;
         return view("admin.favorite", [
             "product" => $product

@@ -104,11 +104,23 @@ Route::get('/admin/favorite',
     ]
 )->name('admin.favorite');
 
+Route::get('/pengguna/favorite',
+    [FavoriteController::class,
+    'relasipengguna'
+    ]
+)->name('pengguna.favorite');
+
 Route::get('/admin/favorite/{id}/action',
     [FavoriteController::class,
     'tambah'
     ]
 )->name('admin.favorite.action');
+
+Route::get('/admin/favorite/{id}/action',
+    [FavoriteController::class,
+    'tambahpengguna'
+    ]
+)->name('pengguna.favorite.action');
 
 Route::get('/logout', [
     AuthController::class,

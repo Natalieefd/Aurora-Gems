@@ -21,6 +21,16 @@ class FavoriteController extends Controller
         return redirect()->route('admin.product')->with('Sukses', 'Data berhasll di tambahkan!');
     }
 
+    public function tambahpengguna($id)
+    {
+        Favorite::create([
+
+            "product_id" => $id,
+            "user_id" => Auth::user()->id,
+        ]);
+        return redirect()->route('pengguna.product')->with('Sukses', 'Data berhasll di tambahkan!');
+    }
+
     public function relasi()
     {
         // $product = Product::with( [
@@ -33,6 +43,22 @@ class FavoriteController extends Controller
         // dd($product);
 // return $product;
         return view("admin.favorite", [
+            "product" => $product
+        ]);
+    }
+
+    public function relasipengguna()
+    {
+        // $product = Product::with( [
+        //     "favorite" =>
+        //     function($query) {
+        //         $query->with("user")->where("user_id", Auth::user()->id);
+        //     }
+        // ])->get();
+        $product = Favorite::where('user_id', Auth::user()->id)->get();
+        // dd($product);
+// return $product;
+        return view("pengguna.favorite", [
             "product" => $product
         ]);
     }

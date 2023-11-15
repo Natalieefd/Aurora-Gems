@@ -2,7 +2,7 @@
 
 @section('content')
 @include('components.navigation_bar_admin')
-
+<div class="relative">
     <div class="bg-white p-8">
 
         <div class="mb-4">
@@ -41,7 +41,8 @@
         @endforeach
         </div>
     </div>
-{{-- @include('components.footer') --}}
+    @include('components.footer')
+</div>
 
 
 

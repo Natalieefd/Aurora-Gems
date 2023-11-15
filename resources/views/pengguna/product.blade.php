@@ -2,7 +2,7 @@
 
 @section('content')
 @include('components.navigation_bar')
-
+<div class="relative">
     <div class="bg-white p-8">
 
         <div class="mb-4">
@@ -18,8 +18,8 @@
         <div class="bg-white p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         @foreach ($product as $prd)
             <div class="bg-pink p-4 shadow-md  rounded-3xl ">
-                <a href="{{ route('admin.product_detail', ['id'=>$prd->id]) }}">
-                <a href="{{ route('admin.favorite.action', $prd->id) }}">
+                <a href="{{ route('pengguna.product_detail', ['id'=>$prd->id]) }}">
+                <a href="{{ route('pengguna.favorite.action', $prd->id) }}">
                     <button class="text-red-600 hover:text-red-700 love-icon" data-product-id="1">
                         {{-- <svg xmlns="http://www.w3.org/2000/svg"
                         {{-- fill="none" viewBox="0 0 24 24" stroke="1" stroke class="h-6 w-6" --}}
@@ -41,7 +41,8 @@
         @endforeach
         </div>
     </div>
-{{-- @include('components.footer') --}}
+    @include('components.footer')
+</div>
 
 
 

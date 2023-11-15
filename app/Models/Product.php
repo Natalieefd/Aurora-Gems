@@ -16,4 +16,5 @@ class Product extends Model
     {
         return $this->belongsTo(kategori::class, 'kategori_id');
     }
+
 }

@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
 use App\Models\Product;
+use App\Models\Favorite;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -82,8 +84,21 @@ Route::get('/admin/product', function () {
     ]);
 })->name('admin.product');
 
+Route::get('/admin/favorite',
+    [FavoriteController::class,
+    'relasi'
+    ]
+)->name('admin.favorite');
+
+Route::get('/admin/favorite/{id}/action',
+    [FavoriteController::class,
+    'tambah'
+    ]
+)->name('admin.favorite.action');
 
 Route::get('/logout', [
     AuthController::class,
     'logout'
 ])->name('logout');
+
+

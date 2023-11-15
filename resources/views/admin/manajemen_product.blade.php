@@ -15,17 +15,17 @@
             <table class="w-full text-sm text-left text-gray-500 rounded-lg">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50  rounded-lg">
                     <tr>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="px-6 py-3 flex justify-center">
                             No.
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="px-6 py-3 ">
                             Nama
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Kategori
                         </th>
-                        <th scope="col" class="px-6 py-3">
-                            Desc
+                        <th scope="col" class="px-6 py-3 flex justify-center">
+                            Deskeripsi
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Size
@@ -45,7 +45,7 @@
                         <th scope="col" class="px-6 py-3">
                             Gambar
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="px-6 py-3 flex justify-center">
                             Aksi
                         </th>
                     </tr>

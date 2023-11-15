@@ -2,7 +2,7 @@
     <div class="flex justify-between items-center pl-10 pr-10 text-peach">
         <ul class="flex gap-10">
             <li>
-                <a href="{{ route('admin.product') }}">
+                <a href="{{ route('pengguna.product') }}">
                     <p class="capitalize font-semibold">produk</p>
                 </a>
             </li>

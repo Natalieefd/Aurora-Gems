@@ -1,7 +1,7 @@
 @extends('layouts.global')
 
 @section('content')
-@include('components.navigation_bar_admin')
+@include('components.navigation_bar')
 
     <div class="bg-white p-8">
 

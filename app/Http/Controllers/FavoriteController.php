@@ -23,13 +23,14 @@ class FavoriteController extends Controller
 
     public function relasi()
     {
-        $product = Product::with( [
-            "favorites" =>
-            function($query) {
-                $query->with("users")->where("user_id", Auth::user()->id);
-            }
-        ])->get();
-
+        // $product = Product::with( [
+        //     "favorite" =>
+        //     function($query) {
+        //         $query->with("user")->where("user_id", Auth::user()->id);
+        //     }
+        // ])->get();
+        $product = Favorite::with('product')->where('user_id', Auth::user()->id)->get();
+// return $product;
         return view("admin.favorite", [
             "product" => $product
         ]);

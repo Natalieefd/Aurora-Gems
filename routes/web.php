@@ -49,6 +49,20 @@ Route::get('/pengguna/dashboard', function() {
 })->name('pengguna.dashboard');
 
 
+Route::get('pengguna/product_detail', function() {
+    return view('pengguna.product_detail', [
+        'product' => Product::all()
+    ]);
+})->name('pengguna.product_detail');
+
+
+Route::get('/pengguna/product', function () {
+    return view('pengguna.product', [
+        'product' => Product::all()
+    ]);
+})->name('pengguna.product');
+
+
 Route::get('admin/product_detail', function() {
     return view('admin.product_detail', [
         'product' => Product::all()

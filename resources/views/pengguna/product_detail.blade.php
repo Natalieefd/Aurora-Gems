@@ -1,6 +1,6 @@
 @extends('layouts.global')
 @section('content')
-    @include('components.navigation_bar_admin')
+    @include('components.navigation_bar')
 
     <div class="flex flex-col h-screen">
         <a href="{{ route('admin.product') }}" class="w-full  pt-10 pl-10">

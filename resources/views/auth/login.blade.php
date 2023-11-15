@@ -1,17 +1,9 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-</head> --}}
 @extends('layouts.global')
 @section('content')
 
-<body class="bg-peach flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+<div class="bg-peach flex items-center justify-center h-screen">
+        <img src="{{ asset("assets/bg_about.jpg") }}" alt=""  class="w-screen h-screen object-cover">
+    <div class="bg-white p-8 rounded-lg shadow-md absolute w-[30%] h-auto flex flex-col overflow-hidden">
         <h1 class="text-2xl font-bold text-center mb-4">Login</h1>
         <form action="{{ route('login.action') }}" method="post" class="w-full">
             @csrf
@@ -62,7 +54,7 @@
             </button>
         </form>
     </div>
-</body>
+</div>
 
 </html>
 

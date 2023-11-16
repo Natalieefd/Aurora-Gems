@@ -25,7 +25,7 @@ class ProductFactory extends Factory
             "berat" => fake()->randomFloat(2.1, 1.8, 0.7),
             'stok' => fake()->randomDigit(),
             'harga' => fake()->randomElement(['850000', '1000000', '670000', "2500000", '4500000']),
-            "gambar" => fake()->randomElement(["product4-3.webp", "product5-1.webp", "product6-1.webp"]),
+            "gambar" => fake()->randomElement(["product2.webp", "product3.webp", "product5.webp"]),
             'kategori_id' => Kategori::all()->random()->id,
         ];
     }

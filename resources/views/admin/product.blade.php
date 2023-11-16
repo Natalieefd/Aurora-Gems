@@ -5,7 +5,7 @@
 <div class="relative">
     <div class="bg-white p-8">
 
-        <div class="mb-4">
+        {{-- <div class="mb-4">
             <label for="category" class="block text-sm font-medium text-gray-700">Filter by Category:</label>
             <select id="category" name="category" class="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
                 <option value="all">All Categories</option>
@@ -14,7 +14,7 @@
                 <option value="kalung">Kalung</option>
                 <option value="anting-anting">Anting-Anting</option>
             </select>
-        </div>
+        </div> --}}
         <div class="bg-white p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         @foreach ($product as $prd)
             <div class="bg-pink p-4 shadow-md  rounded-3xl ">

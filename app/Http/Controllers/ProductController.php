@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kategori;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Http;
 
 class ProductController extends Controller
 {
@@ -14,6 +15,14 @@ class ProductController extends Controller
             'kategoris' => Kategori::all(),
         ]);
     }
+
+    public function index(){
+        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa';
+        $data = Http::get($endpoint);
+        return view('admin.manajemen_data',[
+        'manajemen_data'=>$data
+        ]);
+        }
 
     public function filter($kategori)
     {

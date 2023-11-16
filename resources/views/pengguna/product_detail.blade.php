@@ -12,7 +12,7 @@
         </a>
         <div class="flex justify-center items-center">
             <div class="h-4/6 w-2/5">
-                <img src="{{ asset("assets/{{ $product->gambar }}") }}" alt="" class="w-4/5 rounded-lg shadow-lg">
+                <img src="{{ asset("assets/".$product->gambar) }}" alt="" class="w-4/5 rounded-lg shadow-lg">
             </div>
             <div class="flex flex-col mt-24 p-10 gap-4 bg-gray-50 h-fit w-2/5 rounded-lg shadow-md">
                 <p class="font-semibold text-3xl">{{ $product->nama }}

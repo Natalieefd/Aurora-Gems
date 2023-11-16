@@ -127,18 +127,15 @@ class ProductController extends Controller
 
     public function showProductAdmin($id)
     {
-        $product = Product::where('kategori_id', Kategori::where($id))->get();
-        // $kategori = kategori::findOrFail($id);
-        return view('admin.product_detail', [
-            "product" => $product
-            ]);
+        $product = Product::findOrFail($id);
+        $kategori = Kategori::all();
+        return view('admin.product_detail', ['product' => $product, 'kategori' => $kategori]);
     }
 
     public function showProductPengguna($id)
     {
-        $product = Product::where('kategori_id', Kategori::where($id))->get();
-        return view('pengguna.product_detail', [
-            "product" => $product
-            ]);
+        $product = Product::findOrFail($id);
+        $kategori = Kategori::all();
+        return view('pengguna.product_detail', ['product' => $product, 'kategori' => $kategori]);
     }
 }

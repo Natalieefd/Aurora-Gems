@@ -49,25 +49,11 @@ Route::get('/pengguna/dashboard', function() {
 })->name('pengguna.dashboard');
 
 
-Route::get('pengguna/product_detail', function() {
-    return view('pengguna.product_detail', [
-        'product' => Product::all()
-    ]);
-})->name('pengguna.product_detail');
-
-
 Route::get('/pengguna/product', function () {
     return view('pengguna.product', [
         'product' => Product::all()
     ]);
 })->name('pengguna.product');
-
-
-Route::get('admin/product_detail', function() {
-    return view('admin.product_detail', [
-        'product' => Product::all()
-    ]);
-})->name('admin.product_detail');
 
 
 Route::get('/admin/dashboard', function() {
@@ -88,7 +74,7 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/admin/manajemen_product/edit/{id}', 'edit')->name('admin.edit');
     Route::post('/admin/manajemen_product/edit/{id}/action','update')->name('admin.update');
     Route::post('/admin/manajemen_product/delete/{id}/action', 'delete')->name('admin.delete');
-    // Route::get('/admin/product_detail/show/{id}', 'showProductAdmin')->name('admin.product_detail');
+    Route::get('/admin/product_detail/show/{id}', 'showProductAdmin')->name('admin.product_detail');
     Route::get('/pengguna/product_detail/show/{id}', 'showProductPengguna')->name('pengguna.product_detail');
 });
 

@@ -88,7 +88,8 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/admin/manajemen_product/edit/{id}', 'edit')->name('admin.edit');
     Route::post('/admin/manajemen_product/edit/{id}/action','update')->name('admin.update');
     Route::post('/admin/manajemen_product/delete/{id}/action', 'delete')->name('admin.delete');
-    Route::get('/admin/product_detail/show/{id}', 'showProduct')->name('admin.product_detail');
+    // Route::get('/admin/product_detail/show/{id}', 'showProductAdmin')->name('admin.product_detail');
+    Route::get('/pengguna/product_detail/show/{id}', 'showProductPengguna')->name('pengguna.product_detail');
 });
 
 

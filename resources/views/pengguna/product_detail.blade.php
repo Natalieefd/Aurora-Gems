@@ -3,7 +3,7 @@
     @include('components.navigation_bar')
 
     <div class="flex flex-col h-screen">
-        <a href="{{ route('admin.product') }}" class="w-full  pt-10 pl-10">
+        <a href="{{ route('pengguna.product') }}" class="w-full  pt-10 pl-10">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="w-7 h-7 text-pink">
                 <path fill-rule="evenodd"
                     d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
@@ -12,7 +12,7 @@
         </a>
         <div class="flex justify-center items-center">
             <div class="h-4/6 w-2/5">
-                <img src="{{ asset("assets/$product->gambar") }}" alt="" class="w-4/5 rounded-lg shadow-lg">
+                <img src="{{ asset("assets/{{ $product->gambar }}") }}" alt="" class="w-4/5 rounded-lg shadow-lg">
             </div>
             <div class="flex flex-col mt-24 p-10 gap-4 bg-gray-50 h-fit w-2/5 rounded-lg shadow-md">
                 <p class="font-semibold text-3xl">{{ $product->nama }}
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <p class="capitalize font-medium text-sm mb-1">Category</p>
-                    <p>{{ $kategori->jenis }}</p>
+                    <p>{{ $product->kategori->jenis }}</p>
                 </div>
                 <div>
                     <p class="capitalize font-medium text-sm mb-1">Stock</p>

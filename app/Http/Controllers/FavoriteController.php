@@ -33,15 +33,7 @@ class FavoriteController extends Controller
 
     public function relasi()
     {
-        // $product = Product::with( [
-        //     "favorite" =>
-        //     function($query) {
-        //         $query->with("user")->where("user_id", Auth::user()->id);
-        //     }
-        // ])->get();
-        $product = Favorite::where('user_id', Auth::user()->id)->get();
-        // dd($product);
-// return $product;
+        $product = Favorite::where('user_id', Auth::user()->id)->with('product')->get();
         return view("admin.favorite", [
             "product" => $product
         ]);
@@ -49,15 +41,7 @@ class FavoriteController extends Controller
 
     public function relasipengguna()
     {
-        // $product = Product::with( [
-        //     "favorite" =>
-        //     function($query) {
-        //         $query->with("user")->where("user_id", Auth::user()->id);
-        //     }
-        // ])->get();
-        $product = Favorite::where('user_id', Auth::user()->id)->get();
-        // dd($product);
-// return $product;
+        $product = Favorite::where('user_id', Auth::user()->id)->with('product')->get();
         return view("pengguna.favorite", [
             "product" => $product
         ]);

@@ -125,10 +125,20 @@ class ProductController extends Controller
         return redirect()->route('admin.manajemen_product')->with('success', 'Data product Berhasil Dihapus');
     }
 
-    public function showProduct($id)
+    public function showProductAdmin($id)
     {
-        $product = Product::findOrFail($id);
-        $kategori = kategori::findOrFail($id);
-        return view('admin.product_detail', compact('product', 'kategori'));
+        $product = Product::where('kategori_id', Kategori::where($id))->get();
+        // $kategori = kategori::findOrFail($id);
+        return view('admin.product_detail', [
+            "product" => $product
+            ]);
+    }
+
+    public function showProductPengguna($id)
+    {
+        $product = Product::where('kategori_id', Kategori::where($id))->get();
+        return view('pengguna.product_detail', [
+            "product" => $product
+            ]);
     }
 }

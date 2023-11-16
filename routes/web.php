@@ -117,11 +117,12 @@ Route::get('/admin/favorite/{id}/action',
     ]
 )->name('admin.favorite.action');
 
-Route::get('/admin/favorite/{id}/action',
+Route::get('/pengguna/favorite/{id}/action',
     [FavoriteController::class,
     'tambahpengguna'
     ]
 )->name('pengguna.favorite.action');
+
 
 Route::get('/logout', [
     AuthController::class,

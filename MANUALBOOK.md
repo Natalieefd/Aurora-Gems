@@ -37,5 +37,27 @@
 </h1>
 <img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/ss/product_admin.jpeg">
 <h4 class="text-4xl font-normal "> 
-    Halaman produk ini didesain dengan struktur yang terdiri dari header, konten, dan footer. Header menampilkan empat menu utama: Product, Manajemen Produk, Home, dan Logout, serta menampilkan logo Aurora Gems di bagian tengahnya. Konten halaman ini dirancang untuk menampilkan semua produk yang tersedia di website Aurora Gems, dengan setiap produk ditampilkan dalam bentuk gambar beserta nama dan harga. Pengguna juga dapat menggunakan tombol "Lihat Detail" untuk melihat informasi lebih lanjut tentang suatu produk. Di bagian bawah, terdapat footer yang mencakup logo Aurora Gems dan beberapa menu, seperti Help Center, FAQ, Contact Us, Terms & Conditions, dan Privacy Policy. Perlu diperhatikan bahwa pada tampilan awal halaman, menu-menu ini belum dapat diakses atau diklik. Desain ini secara keseluruhan memberikan pengguna pengalaman awal yang menarik dan informatif sebelum melakukan login atau registrasi di website Aurora Gems.
+    Halaman produk ini didesain dengan struktur yang terdiri dari header, konten, dan footer. Header menampilkan empat menu utama: Product, Manajemen Produk, Home, dan Logout, serta menampilkan logo Aurora Gems di bagian tengahnya. Konten halaman ini dirancang untuk menampilkan semua produk yang tersedia di website Aurora Gems, dengan setiap produk ditampilkan dalam bentuk gambar beserta nama dan harga. Admin juga dapat menggunakan tombol "Lihat Detail" untuk melihat informasi lebih lanjut tentang suatu produk. Di bagian bawah, terdapat footer yang mencakup logo Aurora Gems dan beberapa menu, seperti Help Center, FAQ, Contact Us, Terms & Conditions, dan Privacy Policy. Perlu diperhatikan bahwa pada tampilan awal halaman, menu-menu ini belum dapat diakses atau diklik. Desain ini secara keseluruhan memberikan pengguna pengalaman awal yang menarik dan informatif sebelum melakukan login atau registrasi di website Aurora Gems.
 </h4>
+
+
+
+<h1 class="text-4xl font-bold ">
+          Home Page Pengguna
+</h1>
+<img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/ss/dashboard_pengguna.jpeg">
+<h4 class="text-4xl font-normal "> 
+    Setelah berhasil login, User akan diarahkan ke halaman utama website Aurora Gems. Halaman ini dibangun dengan struktur yang terdiri dari header, konten, dan footer. Header menampilkan empat menu utama: Product, Home, Favorite, dan Logout, sambil menampilkan logo Aurora Gems di bagian tengahnya. Konten halaman ini dirancang dengan menampilkan sebuah promo di bagian atas, diikuti oleh ringkasan informasi "About Us" yang diperkaya dengan beberapa gambar untuk memberikan sentuhan visual yang menarik. Selanjutnya, halaman menampilkan produk-produk terbaru dari Aurora Gems sebagai bagian dari koleksi terkini. Di bagian bawah halaman, terdapat footer yang mencakup logo Aurora Gems dan beberapa menu, seperti Help Center, FAQ, Contact Us, Terms & Conditions, dan Privacy Policy. Perlu diingat bahwa pada tampilan awal halaman, menu-menu ini belum dapat diakses atau diklik. Desain ini secara keseluruhan memberikan pengguna pengalaman awal yang menarik dan informatif sebelum melakukan login atau registrasi di website Aurora Gems.
+</h4>
+
+
+<h1 class="text-4xl font-bold ">
+          Product Page Pengguna
+</h1>
+<img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/ss/product_admin.jpeg">
+<h4 class="text-4xl font-normal "> 
+    Halaman produk ini didesain dengan struktur yang terdiri dari header, konten, dan footer. Header menampilkan empat menu utama: Product, Home, Favorite, dan Logout, serta menampilkan logo Aurora Gems di bagian tengahnya. Konten halaman ini dirancang untuk menampilkan semua produk yang tersedia di website Aurora Gems, dengan setiap produk ditampilkan dalam bentuk gambar beserta nama dan harga. Pengguna juga dapat menggunakan tombol "Lihat Detail" untuk melihat informasi lebih lanjut tentang suatu produk. Di bagian bawah, terdapat footer yang mencakup logo Aurora Gems dan beberapa menu, seperti Help Center, FAQ, Contact Us, Terms & Conditions, dan Privacy Policy. Perlu diperhatikan bahwa pada tampilan awal halaman, menu-menu ini belum dapat diakses atau diklik. Desain ini secara keseluruhan memberikan pengguna pengalaman awal yang menarik dan informatif sebelum melakukan login atau registrasi di website Aurora Gems.
+</h4>
+
+
+

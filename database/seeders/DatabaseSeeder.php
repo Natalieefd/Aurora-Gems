@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         Kategori::factory(3)->create();
         Product::factory(5)->create();
+        $this->call([UserSeeders::class]);
         // Favorite::factory(15)->create();
     }
 }

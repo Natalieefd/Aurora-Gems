@@ -40,24 +40,11 @@ Route::post('/register/action', [
     'registerAction'
 ])->name('register.action');
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-})->name('admin.dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/pengguna/dashboard', function () {
-        return view('pengguna.dashboard');
-    })->name('pengguna.dashboard');
-
-    Route::get('/pengguna/product', function () {
-        return view('pengguna.product', [
-            'product' => Product::all(),
-        ]);
-    })->name('pengguna.product');
-
-    // Route::get('/admin/dashboard', function () {
-    //     return view('admin.dashboard');
-    // })->name('admin.dashboard');
+Route::middleware('auth:admin')->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
 
     Route::get('/admin/manajemen_product', function () {
         return view('admin.manajemen_product', [
@@ -76,21 +63,35 @@ Route::middleware('auth')->group(function () {
         'relasi'
     ])->name('admin.favorite');
 
-    Route::get('/pengguna/favorite', [
-        FavoriteController::class,
-        'relasipengguna'
-    ])->name('pengguna.favorite');
-
     Route::get('/admin/favorite/{id}/action', [
         FavoriteController::class,
         'tambah'
     ])->name('admin.favorite.action');
+});
+
+
+Route::middleware('auth:user')->group(function () {
+    Route::get('/pengguna/dashboard', function () {
+        return view('pengguna.dashboard');
+    })->name('pengguna.dashboard');
+
+    Route::get('/pengguna/product', function () {
+        return view('pengguna.product', [
+            'product' => Product::all(),
+        ]);
+    })->name('pengguna.product');
+
+    Route::get('/pengguna/favorite', [
+        FavoriteController::class,
+        'relasipengguna'
+    ])->name('pengguna.favorite');
 
     Route::get('/pengguna/favorite/{id}/action', [
         FavoriteController::class,
         'tambahpengguna'
     ])->name('pengguna.favorite.action');
 });
+
 
 Route::controller(ProductController::class)->group(function () {
     Route::get('/admin/manajemen_product/tambah', 'tambah')->name('admin.add');
@@ -101,6 +102,7 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/admin/product_detail/show/{id}', 'showProductAdmin')->name('admin.product_detail');
     Route::get('/pengguna/product_detail/show/{id}', 'showProductPengguna')->name('pengguna.product_detail');
 });
+
 
 Route::get('/logout', [
     AuthController::class,

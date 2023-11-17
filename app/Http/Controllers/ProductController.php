@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kategori;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Http;
+use Illuminate\Support\Facades\Http;
 
 class ProductController extends Controller
 {
@@ -69,7 +69,7 @@ class ProductController extends Controller
             "gambar" => $nama_product,
             "kategori_id" => $validateData["kategori_id"],
         ]);
-        return redirect()->route('admin.manajemen_product')->with('Sukses', 'Data berhasll di tambahkan!');
+        return redirect()->route('admin.manajemen_product')->with('Success', 'Data berhasil di tambahkan!');
     }
 
 

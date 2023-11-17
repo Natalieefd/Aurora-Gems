@@ -8,9 +8,9 @@
 <a name="top"></a>
 
 <div align="center">
-<!-- Logo Aplikasi -->
+<!-- Logo -->
 <img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/assets/logo_aurora_gems_render.png" width="30%">
-
+    
 # Aurora Gems
 ### Kelompok 2<br>Website Katalog Perhiasan
 <p>Projek Akhir - Praktikum Framework</p>
@@ -23,6 +23,7 @@
 <br>
 </div>
 
+<img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/assets/aurora_gems_mockup.png">
 
 ## Table Of Content
  - [Introduction](#introduction)

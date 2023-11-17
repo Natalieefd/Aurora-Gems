@@ -42,24 +42,17 @@ class AuthController extends Controller
             'password' => $request->password,
         ];
 
-        // if ($data['username'] == 'aurora' && $data['password'] == '123') {
-        //     return redirect('/admin/dashboard');
-        // }
-
         if (Auth::attempt($data)) {
             if(Auth::user()->username == 'aurora') {
                 return redirect('/admin/dashboard');
             }
             return redirect('/pengguna/dashboard');
+        } else {
+            // Tampilkan pesan kesalahan jika otentikasi gagal
+            session()->flash('error', 'Username atau Password anda salah!');
+            return redirect('/login');
         }
-        // else {
-        //     // Tampilkan pesan kesalahan jika otentikasi gagal
-        //     session()->flash('error', 'Username atau Password anda salah!');
-        //     return redirect('/login');
-        // }
     }
-
-
 
     public function logout()
     {

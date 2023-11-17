@@ -1,14 +1,16 @@
 @extends('layouts.global')
 
 @section('content')
-@include('components.navigation_bar_admin')
+    @include('components.navigation_bar_admin')
     <div class="bg-gradient-to-br from-pink to-deeppink p-8 shadow-md`">
         <p class="text-4xl font-bold mb-4 text-white">Data Product~</p>
         <hr><br>
         <div class="w-full h-auto flex justify-end">
             <div class="w-full h-auto flex justify-end">
-                <a href="{{ route('admin.add') }}"><button
-                        class="px-4 py-2 bg-green-600 rounded-md text text-white">Create</button></a>
+                <a href="{{ route('admin.add') }}">
+                    <button
+                        class="px-4 py-2 bg-green-600 rounded-md text text-white">Create</button>
+                </a>
             </div>
         </div><br>
         <div class="relative overflow-x-auto">
@@ -63,26 +65,26 @@
                             <td class="px-6 py-4">{{ $prd['berat'] }}</td>
                             <td class="px-6 py-4">{{ $prd['stok'] }}</td>
                             <td class="px-6 py-4">{{ $prd['harga'] }}</td>
-                        </td>
-                        <td class="p2">
-                            <div class="flex flex-col items-center">
-                                <img src="{{ asset("assets/$prd->gambar") }}" alt="" class="h-[128px]">
-                            </div>
-                        </td>
+                            </td>
+                            <td class="p2">
+                                <div class="flex flex-col items-center">
+                                    <img src="{{ asset("assets/$prd->gambar") }}" alt="" class="h-[128px]">
+                                </div>
+                            </td>
 
                             <td class="px-6 py-4">
                                 <div class="flex space-x-2">'
-                                    <a href="{{ route('admin.edit', $prd['id']) }}"  onclick="return confirm('Are you sure want to update?')"><button
-                                        class="px-4 py-2 bg-yellow-300 rounded-md
-            text">Edit</button></a>
+                                    <a href="{{ route('admin.edit', $prd['id']) }}"
+                                        onclick="return confirm('Are you sure want to update?')">
+                                        <button
+                                            class="px-4 py-2 bg-yellow-300 rounded-md text">Edit</button>
+                                    </a>
 
-            <form action="{{ route('admin.delete', $prd->id) }}" method="post">
-                @csrf
-                <button class="px-4 py-2 bg-red-600 rounded-md text
-
-text-white"
-                    onclick="return confirm('Are you sure want to delete?')">Delete</button>
-            </form>
+                                    <form action="{{ route('admin.delete', $prd->id) }}" method="post">
+                                        @csrf
+                                        <button class="px-4 py-2 bg-red-600 rounded-md text text-white"
+                                            onclick="return confirm('Are you sure want to delete?')">Delete</button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
@@ -93,4 +95,4 @@ text-white"
         </div>
     </div>
     @include('components.footer')
-</section>
+    </section>

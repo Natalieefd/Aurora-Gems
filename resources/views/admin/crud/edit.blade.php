@@ -1,6 +1,5 @@
 @extends('layouts.global')
 @section('content')
-
     <div class="relative flex items-center h-screen bg-peach">
         <img src="{{ asset('assets/bg_add_edit_data.jpg') }}" alt="" class="absolute right-0 h-screen">
         <div class="absolute right-0 w-screen h-full bg-peach bg-opacity-30"></div>
@@ -31,39 +30,74 @@
                     <label for="" class="capitalize font-medium text-black px-2">nama produk</label>
                     <input type="text" name="nama" placeholder="Nama" value="{{ $products->nama }}"
                         class="w-full pl-4 pr-4 py-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
+                    @error('nama')
+                    <p class="text-red-600">
+                        {{ $message }}
+                    </p>
+                    @enderror
                 </div>
                 <div class="relative mb-5">
                     <label for="" class="capitalize font-medium text-black px-2">Deskripsi</label>
                     <input type="textarea" name="desc" placeholder="deskripsi" value="{{ $products->desc }}"
                         class="w-full pl-4 pr-4 py-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
+                    @error('desc')
+                    <p class="text-red-600">
+                        {{ $message }}
+                    </p>
+                    @enderror
                 </div>
                 <div class="flex gap-5">
                     <div class="relative mb-5">
                         <label for="" class="capitalize font-medium text-black px-2">Size</label>
                         <input type="text" name="size" placeholder="Size" value="{{ $products->size }}"
                             class="w-full pl-4 pr-4 py-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
+                        @error('size')
+                        <p class="text-red-600">
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
                     <div class="relative mb-5">
                         <label for="" class="capitalize font-medium text-black px-2">Berat</label>
                         <input type="text" name="berat" placeholder="Berat" value="{{ $products->berat }}"
                             class="w-full pl-4 pr-4 py-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
+                        @error('warna')
+                        <p class="text-red-600">
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
                 </div>
                 <div class="relative mb-5">
                     <label for="" class="capitalize font-medium text-black px-2">Warna</label>
                     <input type="text" name="warna" placeholder="Warna" value="{{ $products->warna }}"
                         class="w-full pl-4 pr-4 py-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
+                    @error('berat')
+                    <p class="text-red-600">
+                        {{ $message }}
+                    </p>
+                    @enderror
                 </div>
                 <div class="flex gap-5">
                     <div class="relative mb-5">
                         <label for="" class="capitalize font-medium text-black px-2">Stok</label>
                         <input type="text" name="stok" placeholder="Stok" value="{{ $products->stok }}"
                             class="w-full pl-4 pr-4 py-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
+                        @error('stok')
+                        <p class="text-red-600">
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
                     <div class="relative mb-5">
                         <label for="" class="capitalize font-medium text-black px-2">Harga</label>
                         <input type="text" name="harga" placeholder="Harga" value="{{ $products->harga }}"
                             class="w-full pl-4 pr-4 py-2 mt-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-peach">
+                        @error('harga')
+                        <p class="text-red-600">
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
                 </div>
                 <div class="flex flex-col mb-5">
@@ -76,6 +110,11 @@
                             <option value="{{ $kt->id }}" class="">{{ $kt->jenis }}</option>
                         @endforeach
                     </select>
+                    @error('kategori_id')
+                    <p class="text-red-600">
+                        {{ $message }}
+                    </p>
+                    @enderror
                 </div>
                 <div class="flex flex-col mb-7">
                     <label class="capitalize font-medium text-black px-2">Upload Gambar</label>

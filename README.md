@@ -32,7 +32,8 @@
 
 
 ## Introduction
-<!-- tentang aplikasi -->
+<!-- tentang website -->
+Aurora Gems merupakan sebuah website yang menyediakan berbagai koleksi perhiasan khusus untuk wanita dengan desain yang elegan. Aurora Gems menyediakan berbagai macam jenis katalog perhiasan mulai dari cincin, anting-anting, kalung, gelang, dan lain sebagainya. Aurora Gems juga memuat informasi detail mengenai setiap jenis perhiasan yang tersedia, seperti deskripsi, warna, berat, harga dan ukuran perhiasan tersebut. Pengguna juga dapat memilih perhiasan yang mereka sukai dengan menambahkan katalog perhiasan ke favorite mereka.
 
 
 ## Job Desk
@@ -82,7 +83,7 @@ graph
 <br>
 
 ## Manual Book
-Silahkan buka manual book Aurora Gems [disini](MANUALBOOK.md)
+Silahkan buka manual book Aurora Gems [disini](MANUALBOOK.md).
 
 ## Features
 Fitur-fitur yang tersedia pada website Aurora Gems :
@@ -91,6 +92,7 @@ Fitur-fitur yang tersedia pada website Aurora Gems :
     
   + Regist
   + Login
+  + Melihat semua produk
   + Melihat detail produk
   + Menambah poduk ke favorite
   </details>
@@ -99,8 +101,8 @@ Fitur-fitur yang tersedia pada website Aurora Gems :
   <details open><summary><code>Selengkapnya</code></summary>
     
   + Login
+  + Melihat semua produk
   + Melihat detail produk
-  + Menambah poduk ke favorite
   + Manajemen data produk
       + Tambah data produk
       + Ubah data produk

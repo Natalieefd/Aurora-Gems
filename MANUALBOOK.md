@@ -69,4 +69,13 @@
 </h4>
 
 
+<h1 class="text-4xl font-bold ">
+          Detail Product Page Pengguna
+</h1>
+<img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/ss/detail_produk_pengguna.jpeg">
+<h4 class="text-4xl font-normal "> 
+    Halaman produk ini dirancang dengan struktur yang terdiri dari header, konten, dan footer. Header menampilkan empat menu utama: Product, Home, Favorite, dan Logout, serta menampilkan logo Aurora Gems di bagian tengahnya. Kontennya didesain untuk menampilkan detail dari produk yang dipilih untuk dilihat detailnya. Deatil produk berisikan: gambar, nama, deskripsi, size, berat, warna, kategori, stok, dan harga. Di bagian bawah, terdapat footer yang mencakup logo Aurora Gems dan beberapa menu, seperti Help Center, FAQ, Contact Us, Terms & Conditions, dan Privacy Policy. Perlu diperhatikan bahwa pada tampilan awal halaman, menu-menu ini belum dapat diakses atau diklik. Desain ini secara keseluruhan memberikan pengguna pengalaman awal yang menarik dan informatif sebelum melakukan login atau registrasi di website Aurora Gems.
+</h4>
+
+
 

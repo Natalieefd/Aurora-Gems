@@ -18,14 +18,14 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            "nama" => fake()->randomElement(["Majestic Adorn", "Sparkle Strand", "Tranquil Twirl", "Elegance Cuff"]),
+            "nama" => fake()->randomElement(["Majestic Adorn", "Sparkle Strand", "Sparkle Santiest", "Susie Lityum", "Elegance Cuff", "Elegance Cuff Flower"]),
             "desc" => fake()->paragraph(),
             "size" => fake()->randomFloat(14, 15, 16),
             "warna" => fake()->randomElement(["Rose", "Gold", "Silver",]),
             "berat" => fake()->randomFloat(2.1, 1.8, 0.7),
             'stok' => fake()->randomDigit(),
             'harga' => fake()->randomElement(['850000', '1000000', '670000', "2500000", '4500000']),
-            "gambar" => fake()->randomElement(["product2.webp", "product3.webp", "product5.webp"]),
+            "gambar" => fake()->randomElement(["product3.webp", "product5.webp", "product1.webp", "product8.jpg", "about4.jpg", "producttop3.jpg", "about3.jpg"]),
             'kategori_id' => Kategori::all()->random()->id,
         ];
     }

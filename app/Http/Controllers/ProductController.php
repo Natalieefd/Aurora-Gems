@@ -49,7 +49,7 @@ class ProductController extends Controller
 
         $validateData = $request->validate([
             "nama" => "required|string|max:30",
-            "desc" => "required|string|max:100",
+            "desc" => "required|string|max:200",
             "size" => "required|integer",
             "warna" => "required|string",
             "berat" => "required|numeric",
@@ -102,7 +102,7 @@ class ProductController extends Controller
 
         $request->validate([
             "nama" => "required|string|max:30",
-            "desc" => "required|string|max:100",
+            "desc" => "required|string|max:200",
             "size" => "required|integer",
             "warna" => "required|string",
             "berat" => "required|numeric",

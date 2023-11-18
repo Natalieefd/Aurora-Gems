@@ -75,11 +75,6 @@ Route::middleware('auth:user')->group(function () {
         return view('pengguna.dashboard');
     })->name('pengguna.dashboard');
 
-    Route::get('/pengguna/product', function () {
-        return view('pengguna.product', [
-            'product' => Product::all(),
-        ]);
-    })->name('pengguna.product');
 
     Route::get('/pengguna/favorite', [
         FavoriteController::class,
@@ -89,8 +84,15 @@ Route::middleware('auth:user')->group(function () {
     Route::get('/pengguna/favorite/{id}/action', [
         FavoriteController::class,
         'tambahpengguna'
-    ])->name('pengguna.favorite.action');
+        ])->name('pengguna.favorite.action');
 });
+
+
+Route::get('/pengguna/product', function () {
+    return view('pengguna.product', [
+        'product' => Product::all(),
+    ]);
+})->name('pengguna.product');
 
 
 Route::controller(ProductController::class)->group(function () {

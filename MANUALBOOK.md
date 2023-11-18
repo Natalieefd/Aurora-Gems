@@ -54,7 +54,7 @@
 <h1 class="text-4xl font-bold ">
           Manajemen Produk Admin 
 </h1>
-<img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/ss/manajemen_product_add2.png">
+<img src="https://github.com/Natalieefd/Aurora-Gems/blob/main/public/ss/products_admin.jpeg">
 <h4 class="text-4xl font-normal "> 
     Halaman manajemen produk ini didesain dengan struktur yang terdiri dari header, konten, dan footer. Header menampilkan empat menu utama: Product, Manajemen Produk, Home, dan Logout, serta menampilkan logo Aurora Gems di bagian tengahnya. Kontennya dirancang untuk menampilkan sebuah tabel yang menyajikan data produk, termasuk nama, kategori, deskripsi, size, berat, warna, stok, harga, dan gambar. Selain itu, terdapat tiga tombol aksi yang memungkinkan admin untuk mengelola data produk, yaitu tombol "Create" untuk menambah produk baru, "Edit" untuk mengubah informasi produk, dan "Delete" untuk menghapus produk. Desain ini memberikan pengguna kemudahan dalam manajemen produk dan memastikan tampilan yang komprehensif serta intuitif bagi admin. Di bagian bawah, terdapat footer yang mencakup logo Aurora Gems dan beberapa menu, seperti Help Center, FAQ, Contact Us, Terms & Conditions, dan Privacy Policy. Perlu diperhatikan bahwa pada tampilan awal halaman, menu-menu ini belum dapat diakses atau diklik. Desain ini secara keseluruhan memberikan pengguna pengalaman awal yang menarik dan informatif sebelum melakukan login atau registrasi di website Aurora Gems.
 </h4>

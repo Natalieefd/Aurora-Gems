@@ -17,7 +17,7 @@ class ProductController extends Controller
     }
 
     public function index(){
-        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa';
+        $endpoint = env('BASE_ENV').'/api/admin/data/produk';
         $data = Http::get($endpoint);
         return view('admin.manajemen_data',[
         'manajemen_data'=>$data
